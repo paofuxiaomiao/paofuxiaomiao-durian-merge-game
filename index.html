@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>合成大榴莲</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Durian Merge</p>
+        <h1>合成大榴莲</h1>
+        <p class="subtitle">
+          像“合成大西瓜”一样上头，但这次是更香更炸裂的榴莲局。
+        </p>
+      </section>
+
+      <section class="game-panel">
+        <div class="hud">
+          <div class="hud-card">
+            <span class="hud-label">当前分数</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="hud-card">
+            <span class="hud-label">最高纪录</span>
+            <strong id="best">0</strong>
+          </div>
+          <div class="hud-card next-card">
+            <span class="hud-label">下一个</span>
+            <div id="nextFruit" class="next-fruit"></div>
+          </div>
+        </div>
+
+        <div class="stage-wrap">
+          <div class="controls-tip">移动鼠标或手指瞄准，点击或松手投放</div>
+          <canvas id="gameCanvas" width="420" height="720" aria-label="合成大榴莲游戏画布"></canvas>
+          <div class="top-line">危险线</div>
+          <div id="toast" class="toast">连成了，真香。</div>
+          <div id="gameOver" class="overlay hidden">
+            <div class="overlay-card">
+              <p class="overlay-tag">锅里塞满了</p>
+              <h2>榴莲山爆仓</h2>
+              <p>再来一局，把更大的榴莲合出来。</p>
+              <button id="restartBtn" type="button">重新开榴</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button id="restartInlineBtn" type="button" class="secondary-btn">重新开始</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
